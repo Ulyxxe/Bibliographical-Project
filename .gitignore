@@ -302,3 +302,4 @@ TSWLatexianTemp*
 Quantum/
 Ressources/
 *.pdf
+!interimReportPhysics.pdf
