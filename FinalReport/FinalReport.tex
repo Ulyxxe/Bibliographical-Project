@@ -14,9 +14,12 @@
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{graphicx}
+\usepackage{caption} 
 \usepackage{titling}
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
 \usepackage{indentfirst}
+\usepackage{siunitx}
+\usepackage{amsmath}
 \usepackage[backend=biber,]{biblatex}
 \nocite{*}
 \addbibresource{Biblio.bib}
@@ -56,17 +59,88 @@
 \tableofcontents
 \addcontentsline{toc}{section}{Introduction}
 
+\setlength{\parskip}{10pt}
+
+
 \newpage
 \section*{Introduction}
-In the introduction,  we will introduce you to the historical context of X-ray discovery and the significance of Wilhelm Conrad Röntgen's work. \\
+
+Before starting explanation of Wilhelm Röntgen's work and discovery we have made the choice of introduce a brief abstract on current theorical aspect of X-rays. There are several elementary points usefull to understand. Please keep in mind during lecture those notions.
 
 \href{https://radiologymasterclass.co.uk}{Basics of X-ray Physics - X-ray production}\\ 
 
 \href{https://www.britannica.com/biography/Wilhelm-Rontgen}{Wilhelm Conrad Roentgen | Biography, Discovery, X-Rays, \& Facts | Britannica }
+\subsection*{Basics of X-rays's physics}
+X-rays, also recognized as X-radiation, are a form of electromagnetic radiation characterized by
+high energies. Radiation categorization is based on its wavelength \(\lambda\), representing the length of
+one complete wave cycle. This wavelength can alternatively be defined in terms of frequency \(\nu\)
+and the propagation speed of the wave, denoted as the speed of light. The relationship
+between these parameters is fundamental in characterizing different types of radiation, illustrating
+the interplay between wavelength, frequency, and the speed of light in the electromagnetic
+spectrum.
+
+\begin{equation}
+  \lambda = \frac{c}{\nu}
+\end{equation}
+
+
+The energy of a photon is characterised by the following formula :
+
+\[E= \frac{hc}{\lambda}= h\nu\]
+
+The energy of photons can be expressed using Planck's constant \(h \approx 6.626.10^{-3} J.s\) and the
+speed of light \(c \approx 2.997.10^8 m.s^{-1}\). This energy is directly connected to the wavelength \(\lambda\) or
+frequency \(\nu\) of the photon, measured in electron volts [eV]. The relationship reveals that the
+photon energy is directly proportional to its frequency and inversely proportional to its
+wavelength. In simpler terms, an increase in frequency corresponds to higher energy, highlighting
+the direct relationship between these fundamental properties of photons.
+
+These high-energy photons possess short wavelengths, resulting in exceptionally high
+frequencies. The pivotal parameter defining all photons is their radiation frequency, which, in
+turn, determines their energy. Photons are classified based on their energies, spanning from low-
+energy radio waves and infrared radiation, progressing through visible light, and culminating in
+high-energy X-rays and gamma rays.
+\newpage
+
+Here is the complete electromagnetic spectrum :
+\begin{center}
+\includegraphics[scale = 2.4]{elecSpec.jpg}
+\captionof{figure}{The Electromagnetic Spectrum}
+\end{center}
+
+It is relevant to note that \textit{X-rays and Gamma-rays} are also called \textit{ionizing radiation} meaning they have engough energy to transform atom they go through into ions. Hence, the atom loose or receive an electron. This can make matter unstable.
+
+\subsection*{Bremsstrahlung effect or braking radiation}
+
+In today's world, X-rays are generated using specialized X-ray machines. These machines offer
+the flexibility to adjust both current and voltage settings, enabling the manipulation of the
+properties of the X-ray beam produced. This capability allows for the application of distinct X-
+ray beam spectra tailored to specific body parts during medical imaging procedures.
+
+Nowadays, Science explains the generation of X-rays  the \textit{Bremsstrahlung }effect from the German, braking radiation. 
+
+
+Maxwell's equations:
+\begin{align}
+  \nabla \cdot \vec{E} &= \dfrac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \vec{B} &= 0 \\
+  \nabla \times \vec{E} &= -\dfrac{\partial \vec{B}}{\partial t} \\
+  \nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0 \varepsilon_0 \dfrac{\partial \vec{E}}{\partial t}
+\end{align}
+
+Lorentz force equation:
+\begin{equation}
+  \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
+\end{equation}
+
+
+
+
+
 
 \chapter{Historical Background}
 \section{Radiation Understanding in the Late 19\textsuperscript{th} century}
-  Here we’ll talk about the scientific and technological developments preceding Röntgen's work. We will also talk about the state of physics and understanding of radiation in the late 19th century. 
+  Here we'll talk about the scientific and technological developments preceding Röntgen's work. We will also talk about the state of physics and understanding of radiation in the late 19th century. 
 
 \chapter{Life and Career of Wilhelm Conrad Röntgen}
 \section{Early Life of an enthusiastic genius}
@@ -135,7 +209,8 @@ Here we will discuss and argue about the potential advancements and innovations 
 
 \textbf{A real references numerotation system will be implemented, the use of  \LaTeX\ is really powerful for that. At the moment we only have link included in each section. We are aware of the necessity to have exhaustive and clear references for our work. }\\[1ex]
 
-\printbibliography[type=book, heading=subbibliography,title={Books}]
+
+\printbibliography[type=book,heading=subbibliography,title={Books}]
 \printbibliography[type=article, heading=subbibliography, title={Articles}]
 \printbibliography[type=online,heading=subbibliography, title={Online Resources}]
 \printbibliography[type=misc, heading=subbibliography, title={Other Documents}]
